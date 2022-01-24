@@ -29,7 +29,12 @@ svg {
     animation-fill-mode: both;
 }
 
+
+
+
 #train {
+    transform: translateX(100px);
+    clip-path: url(DES341_PosterEdit-01.svg#clip);
     
 }
 
