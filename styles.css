@@ -5,6 +5,14 @@
     box-sizing: border-box;  
 }
 
+body {
+    background-image: url("wood_texture.jpeg");
+    background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+}
+
 svg {
     display: block;
     margin-left: auto;
@@ -14,8 +22,10 @@ svg {
 }
 
 #background {
-    animation: fadeIn ease 4s;
-     }
+
+    animation: LeftDownFade ease 4s;
+    
+ }
 
 #border{
     animation: slideIn ease 3s;
@@ -45,6 +55,17 @@ svg {
     
 }
 
+
+@keyframes LeftDownFade {
+    0% {
+       opacity: 1;
+       transform: translate(-800px, -800px); 
+    }
+    100% {
+    opacity: 1;
+       transform: translateX(0);
+    }
+ }   
 
 @keyframes fadeIn {
     0% {opacity:0;}
