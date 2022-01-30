@@ -19,6 +19,16 @@ svg {
     margin-right: auto;
     width: 37%;
   height: auto;
+  overflow: visible;
+  position: absolute;
+  text-align: center;
+  
+  
+}
+
+#clip {
+    position: absolute;
+    text-align: center;
 }
 
 #background {
@@ -28,15 +38,18 @@ svg {
  }
 
 #border{
-    animation: slideIn ease 3s;
+    animation: slideIn ease 4s;
     animation-fill-mode: both;
     animation-delay: 2s;
+   
+    
 }
 
 #illustration, #border_text {
     animation: fadeIn ease 5s;
-    animation-delay: 5s;
+    animation-delay: 6s;
     animation-fill-mode: both;
+    
 }
 
 
@@ -44,7 +57,7 @@ svg {
 
 #train {
     transform: translateX(100px);
-    clip-path: url(DES341_PosterEdit-01.svg#clip);
+    clip-path: url("#clip")
     
 }
 
@@ -75,9 +88,10 @@ svg {
   @keyframes slideIn {
     0% {transform: translateY(-1000px);
         opacity: 0;
-        
-    }
+         }
+    
 100%  {transform: translateY(0px);
+    opacity: 1;
     }
 }
 
