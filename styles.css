@@ -20,50 +20,43 @@ svg {
     width: 37%;
   height: auto;
   overflow: visible;
-  position: absolute;
-  text-align: center;
-  
-  
-}
-
-#clip {
-    position: absolute;
-    text-align: center;
 }
 
 #background {
 
-    animation: LeftDownFade ease 4s;
+    animation: LeftDownFade 6s;
+    transform-origin: center;
+   
     
  }
 
 #border{
-    animation: slideIn ease 4s;
+    animation: slideIn ease 2.5s;
     animation-fill-mode: both;
-    animation-delay: 2s;
-   
-    
+    animation-delay: 6s;
 }
 
 #illustration, #border_text {
     animation: fadeIn ease 5s;
-    animation-delay: 6s;
+    animation-delay: 9s;
     animation-fill-mode: both;
-    
 }
 
 
 
 
 #train {
-    transform: translateX(100px);
-    clip-path: url("#clip")
+    animation: trainMove ease 4s;
+    animation-delay: 12.1s;
+    animation-fill-mode: both;
+    
+   
     
 }
 
 #poster_info {
     animation: fadeIn ease 4s;
-    animation-delay: 10s;
+    animation-delay: 16.5s;
     animation-fill-mode: both;
     
 }
@@ -71,19 +64,40 @@ svg {
 
 @keyframes LeftDownFade {
     0% {
-       opacity: 1;
-       transform: translate(-800px, -800px); 
-    }
-    100% {
+       opacity: .8;
+       transform: translate(-1000px,-300px) rotate(15deg) scale(150%) ; 
+        }
+   33% {
     opacity: 1;
-       transform: translateX(0);
+    transform: translate(1000px) rotate(-10deg) scale(140%);
     }
+66% {
+    transform: translate(-620px, 50px) rotate(8deg) scale(110%) ; 
+  }
+100% {
+    opacity: 1;
+       transform: translateX(0) scale(100%) ;}
  }   
+
 
 @keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
   }
+
+  @keyframes trainMove {
+    0% {transform: translate(300px, -200px);
+        opacity: 0;
+     
+    30% {
+        opacity: 1;
+    }
+
+    }
+100%  {
+    opacity: 1;
+    }
+}
 
   @keyframes slideIn {
     0% {transform: translateY(-1000px);
@@ -91,9 +105,7 @@ svg {
          }
     
 100%  {transform: translateY(0px);
-    opacity: 1;
     }
 }
-
 
 
