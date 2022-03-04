@@ -14,7 +14,7 @@
 </head>
 <body>
 
-
+<div class="mask-box">
 
   <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200.72 1524">
     <defs>
@@ -2351,10 +2351,17 @@
     </g>
   </svg>
 
-  <img src="mask.png" alt="mask">
+  <img class="mask-img" src="mask.png" alt="mask">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+  setTimeout(function() { 
+    $('.mask-img').css('opacity', '1')
+    }, 12000);
   
-
-
+</script>
 
 
       

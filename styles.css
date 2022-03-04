@@ -17,16 +17,24 @@ svg {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 37%;
+    width: 100%;
   height: auto;
   overflow: visible;
 }
 
-.mask {
+.mask-box {
+    position: relative;
+    width: 37%;
+    margin: auto;
+}
+
+.mask-img {
     position: absolute;
-    top: 50px;
-    right: 478px;
-    width: 486px;
+    top: 23.5px;
+    right: 21.2px;
+    width: 45%;
+    opacity: 0;
+   
 }
 
 #background {
@@ -63,7 +71,7 @@ svg {
 
 #poster_info {
     animation: fadeIn ease 4s;
-    animation-delay: 16.5s;
+    animation-delay: 16s;
     animation-fill-mode: both;
     
 }
